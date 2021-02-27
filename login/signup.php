@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="css/form.css">
+
+
 </head>
 
 
 
 
 <body>
-
+<div class="form">
 <h2> Sign Up </h2>
-<form action="includes/signup.inc.php" method="post">
-<input type="text" name="name" placeholder="Full Name...">
-<input type="text" name="email" placeholder="E-mail...">
-<input type="text" name="uid" placeholder="Username...">
-<input type="password" name="pwd" placeholder="Password...">
-<input type="password" name="pwdrepeat" placeholder="Repeat Password...">
-<button type="submit" name="submit">Sign Up</button>
 
+<form action="includes/signup.inc.php" method="post">
+<input class="input" type="text" name="name" placeholder="Full Name...">
+</br>
+<input class="input" type="text" name="email" placeholder="E-mail...">
+</br>
+<input  class="input"type="text" name="uid" placeholder="Username...">
+</br>
+<input  class="input"type="password" name="pwd" placeholder="Password...">
+</br>
+<input  class="input"type="password" name="pwdrepeat" placeholder="Repeat Password...">
+</br>
+<button  class="input" type="submit" name="submit">Sign Up</button>
 </form>
+</div>
 
 <?php
 	if(isset($_GET["error"])){
