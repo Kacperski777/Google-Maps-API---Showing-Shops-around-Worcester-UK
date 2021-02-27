@@ -15,7 +15,9 @@
 </br>
 <input class="input" type="password" name="pwd" placeholder="Password...">
 </br>
-<button class="input" type="submit" name="submit">Login</button>
+<button class="input submit" type="submit" name="submit">LOGIN</button>
+</br>
+<a  href="signup.php">Create an account</a>
 </div>
 
 <?php

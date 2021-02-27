@@ -12,7 +12,7 @@
 
 
 <body>
-<div class="form">
+<div class="form ">
 <h2> Sign Up </h2>
 
 <form action="includes/signup.inc.php" method="post">
@@ -26,8 +26,9 @@
 </br>
 <input  class="input"type="password" name="pwdrepeat" placeholder="Repeat Password...">
 </br>
-<button  class="input" type="submit" name="submit">Sign Up</button>
+<button  class="input submit" type="submit" name="submit">SIGN UP</button>
 </form>
+<a href="login.php">Already registered? Login!</a>
 </div>
 
 <?php

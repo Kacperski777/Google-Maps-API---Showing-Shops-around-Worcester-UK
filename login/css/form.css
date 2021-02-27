@@ -1,15 +1,49 @@
+body{
+	background-color: purple;
+
+
+}
+
+
+body::after {
+
+  background: url('../img/worcester1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  content: "";
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;   
+}
+
+
 .form{
 	
+font-family: Gill Sans, sans-serif;
+color: black;	
 text-align: center;	
 font-size: 25px;
-margin-top: 100px;
-
-
+border-radius: 20px;
+margin-top: 12%;
+margin-left: 27%;
+width: 50%;
+background-color: #660066;
+box-shadow: 5px 10px #330033;
 }
 
 .input{
 	margin-top: 30px;
 	padding-top: 10px;
+}
+
+.submit{
+	
+	background-color: #b300b3;
+	border-radius: 50px;
+	color: white;
 	
 	
 }
