@@ -28,7 +28,7 @@ text-align: center;
 font-size: 25px;
 border-radius: 20px;
 margin-top: 12%;
-margin-left: 27%;
+margin-left: 25%;
 width: 50%;
 background-color: #660066;
 box-shadow: 5px 10px #330033;
@@ -37,6 +37,14 @@ box-shadow: 5px 10px #330033;
 .input{
 	margin-top: 30px;
 	padding-top: 10px;
+	box-shadow: 5px 5px black;
+
+	transition: 0.3s;
+}
+
+
+.submit:hover{
+	opacity: 1;
 }
 
 .submit{
@@ -44,6 +52,39 @@ box-shadow: 5px 10px #330033;
 	background-color: #b300b3;
 	border-radius: 50px;
 	color: white;
+	opacity: 0.6;
 	
+	
+}
+
+.home{
+	
+background-color: #660066;	
+color: black;	
+height: 30px;
+font-size: 20px;	
+}
+
+.home2:hover{
+	
+background-color: #330033;			
+	
+}
+
+p{
+	
+text-align: center;
+margin-left: 43.5%;
+width: 13%;
+font-size: 35px;	
+color: white;
+background-color: red;	
+margin-top: 15px;	
+}
+
+.success{
+	
+	
+background-color: green;	
 	
 }

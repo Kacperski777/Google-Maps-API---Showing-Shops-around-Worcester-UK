@@ -3,14 +3,14 @@ div{
 font-size: 20px;
 text-align: right; 
 padding-right: 5px; 
-background-color: purple; 
+background-color: #660066; 
 font-family: Gill Sans, sans-serif;
 }
 
 .button{
 	
 	padding-right: 10px; 
-	color: black;
+	color: white;
 	
 	
 	
@@ -18,7 +18,8 @@ font-family: Gill Sans, sans-serif;
 
 .button:hover{
 	
- color: white;	
+ color: white;
+ background-color: #330033; 
  text-decoration: none;		
 	
 }

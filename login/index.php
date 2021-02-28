@@ -16,6 +16,11 @@
 
 
 <body>
+
+
+
+
+
 <nav>
 <div>
 
@@ -36,7 +41,7 @@ else{
 	echo  "<a class='button' href='signup.php'>SIGN UP</a> ";
 
 	echo "<a  class='button' href='login.php'> LOGIN</a> </div>";
-	echo '</div>';
+	
 	
 }
 

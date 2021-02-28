@@ -12,8 +12,18 @@
 
 
 <body>
+
+<div class="home">
+<a class="home2" style="color: white; text-decoration: none;" href="index.php">HOME PAGE</a>
+
+
+</div>
+
+
+
+
 <div class="form ">
-<h2> Sign Up </h2>
+<h2> SIGN UP </h2>
 
 <form action="includes/signup.inc.php" method="post">
 <input class="input" type="text" name="name" placeholder="Full Name...">
@@ -32,18 +42,20 @@
 </div>
 
 <?php
+echo "<link rel='stylesheet' type='text/css' href='css/form.css'>";
+
 	if(isset($_GET["error"])){
 		if($_GET["error"] == "emptyinput"){
-			echo "<p>FILL IN ALL FIELDS!</p>";
+			echo "<p>Fill in all the fields</p>";
 		}
 		else if($_GET["error"] == "invaliduid"){
-			echo "<p>Choose a proper username!</p>";
+			echo "<p>Choose a proper username</p>";
 		}
 		else if($_GET["error"] == "invalidemail"){
-			echo "<p>Choose a proper email!</p>";
+			echo "<p>Choose a proper email</p>";
 		}
 		else if($_GET["error"] == "passwordsdontmatch"){
-			echo "<p>Passwords dont match!</p>";
+			echo "<p>Passwords do not match</p>";
 		}
 		else if($_GET["error"] == "stmtfailed"){
 			echo "<p>Something went wrong</p>";
@@ -52,7 +64,7 @@
 			echo "<p>Choose another username</p>";
 		}
 		else if($_GET["error"] == "none"){
-			echo "<p>You have signed up!</p>";
+			echo "<p class='success'>You have signed up!</p>";
 		}
 	}
 

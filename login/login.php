@@ -8,8 +8,17 @@
 
 
 <body>
+
+<div class="home">
+<a class="home2" style="color: white; text-decoration: none;" href="index.php">HOME PAGE</a>
+
+
+</div>
+
+
+
 <div class="form">
-<h2> Login </h2>
+<h2> LOGIN </h2>
 <form action="includes/login.inc.php" method="post">
 <input class="input" type="text" name="uid" placeholder="Username/E-mail...">
 </br>
@@ -21,12 +30,13 @@
 </div>
 
 <?php
+echo "<link rel='stylesheet' type='text/css' href='css/form.css'>";
 	if(isset($_GET["error"])){
 		if($_GET["error"] == "emptyinput"){
-			echo "<p>FILL IN ALL FIELDS!</p>";
+			echo "<p>Fill in all the fields</p>";
 		}
 		else if($_GET["error"] == "wronglogin"){
-			echo "<p>Incorrect login information!</p>";
+			echo "<p>Incorrect login information</p>";
 		}
 	}
 
