@@ -13,32 +13,32 @@
 
 <body>
 
-<div class="home">
-<a class="home2" style="color: white; text-decoration: none;" href="index.php">HOME PAGE</a>
+<div class="home col">
+<a class="home2 col-1" style="color: white; text-decoration: none;" href="index.php">HOME PAGE</a>
 
 
 </div>
 
 
 
-
-<div class="form col-6">
-<h2> SIGN UP </h2>
-
-<form action="includes/signup.inc.php" method="post">
-<input class="input" type="text" name="name" placeholder="Full Name...">
+<div class="container">
+<div class="form row">
+<h2 class="col-12"> SIGN UP </h2>
+<form class="col" action="includes/signup.inc.php" method="post">
+<input  class="input " type="text" name="name" placeholder="Full Name...">
 </br>
-<input class="input" type="text" name="email" placeholder="E-mail...">
+<input class="input  " type="text" name="email" placeholder="E-mail...">
 </br>
-<input  class="input"type="text" name="uid" placeholder="Username...">
+<input  class="input "type="text" name="uid" placeholder="Username...">
 </br>
-<input  class="input"type="password" name="pwd" placeholder="Password...">
+<input  class="input "type="password" name="pwd" placeholder="Password...">
+</br> 
+<input  class="input "type="password" name="pwdrepeat" placeholder="Repeat Password...">
 </br>
-<input  class="input"type="password" name="pwdrepeat" placeholder="Repeat Password...">
-</br>
-<button  class="input submit" type="submit" name="submit">SIGN UP</button>
+<button  class="input submit col-6" type="submit" name="submit">SIGN UP</button>
 </form>
-<a href="login.php">Already registered? Login!</a>
+<a class="col-12" href="login.php">Already registered? Login!</a>
+</div>
 </div>
 
 <?php

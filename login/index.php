@@ -38,10 +38,10 @@ if (isset($_SESSION["useruid"])){
 	
 }
 else{
-	echo '<div class="column">';
-	echo  "<a class='button' href='signup.php'>SIGN UP</a> ";
+	echo '<div class="col">';
+	echo  "<a  class='button col-1' href='signup.php'>SIGN UP</a> ";
 
-	echo "<a  class='button' href='login.php'> LOGIN</a> </div>";
+	echo "<a  class='button col-1' href='login.php'> LOGIN</a> </div>";
 	
 	
 }

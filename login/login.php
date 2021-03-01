@@ -9,17 +9,17 @@
 
 <body>
 
-<div class="home">
-<a class="home2" style="color: white; text-decoration: none;" href="index.php">HOME PAGE</a>
+<div class="home col">
+<a class="home2 col-1" style="color: white; text-decoration: none;" href="index.php">HOME PAGE</a>
 
 
 </div>
 
 
-
-<div class="form col-6">
-<h2> LOGIN </h2>
-<form action="includes/login.inc.php" method="post">
+<div class="container">
+<div class="form row">
+<h2 class="col-12"> LOGIN </h2>
+<form class="col" action="includes/login.inc.php" method="post">
 <input class="input" type="text" name="uid" placeholder="Username/E-mail...">
 </br>
 <input class="input" type="password" name="pwd" placeholder="Password...">
@@ -28,7 +28,7 @@
 </br>
 <a  href="signup.php">Create an account</a>
 </div>
-
+</div>
 <?php
 echo "<link rel='stylesheet' type='text/css' href='css/form.css'>";
 	if(isset($_GET["error"])){
