@@ -31,19 +31,19 @@ echo "<link rel='stylesheet' type='text/css' href='css/style.css'>";
 
 if (isset($_SESSION["useruid"])){
 	echo "<p> Hello there " . $_SESSION["useruid"] ."</p>";
-	
+
 	echo "<a href='profile.php'>Profile page</a>";
 	echo "<a href='includes/logout.inc.php'>Log out</a>";
-	
-	
+
+
 }
 else{
-	echo '<div class="col">';
-	echo  "<a  class='button col-1' href='signup.php'>SIGN UP</a> ";
+	echo '<div class="col-12 navigation">';
+	echo  "<a  class='button home2 col-1' href='signup.php'>SIGN UP</a> ";
 
-	echo "<a  class='button col-1' href='login.php'> LOGIN</a> </div>";
-	
-	
+	echo "<a  class='button home2 col-1' href='login.php'> LOGIN</a> </div>";
+  echo '</div>';
+
 }
 
 

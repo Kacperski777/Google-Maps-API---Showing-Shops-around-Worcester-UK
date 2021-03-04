@@ -20,48 +20,53 @@
 </div>
 
 
+<section>
 
 <div class="container">
-<div class="form row">
-<h2 class="col-12"> SIGN UP </h2>
-<form class="col" action="includes/signup.inc.php" method="post">
-<input  class="input " type="text" name="name" placeholder="Full Name...">
-</br>
-<input class="input  " type="text" name="email" placeholder="E-mail...">
-</br>
-<input  class="input "type="text" name="uid" placeholder="Username...">
-</br>
-<input  class="input "type="password" name="pwd" placeholder="Password...">
-</br> 
-<input  class="input "type="password" name="pwdrepeat" placeholder="Repeat Password...">
-</br>
-<button  class="input submit col-6" type="submit" name="submit">SIGN UP</button>
-</form>
-<a class="col-12" href="login.php">Already registered? Login!</a>
-</div>
-</div>
+	<div class="form row">
+	<div class="col-lg-6 image-worcester ">
+		<img class="worcester" src="img/worcester1.jpg">
+	</div>
+<div class="col-lg-6 col-sm-12 form2 ">
+<h2 class="signup-title"> SIGN UP </h2>
+<form class="" action="includes/signup.inc.php" method="post">
+<input  class="input" type="text" name="name" placeholder="Full Name...">
+<input class="input " type="text" name="email" placeholder="E-mail...">
 
+<input  class="input "type="text" name="uid" placeholder="Username...">
+
+<input  class="input "type="password" name="pwd" placeholder="Password...">
+
+<input  class="input "type="password" name="pwdrepeat" placeholder="Repeat Password...">
+<br />
+<button  class="input submit" type="submit" name="submit">SIGN UP</button>
+</form>
+<a class="link" href="login.php">Already registered? Login!</a>
+	</div>
+</div>
+</div>
+</section>
 <?php
 echo "<link rel='stylesheet' type='text/css' href='css/form.css'>";
 
 	if(isset($_GET["error"])){
 		if($_GET["error"] == "emptyinput"){
-			echo "<p>Fill in all the fields</p>";
+			echo "<p class= 'error'>Fill in all the fields</p>";
 		}
 		else if($_GET["error"] == "invaliduid"){
-			echo "<p>Choose a proper username</p>";
+			echo "<p class= 'error'>Choose a proper username</p>";
 		}
 		else if($_GET["error"] == "invalidemail"){
-			echo "<p>Choose a proper email</p>";
+			echo "<p class= 'error'>Choose a proper email</p>";
 		}
 		else if($_GET["error"] == "passwordsdontmatch"){
-			echo "<p>Passwords do not match</p>";
+			echo "<p class= 'error'>Passwords do not match</p>";
 		}
 		else if($_GET["error"] == "stmtfailed"){
-			echo "<p>Something went wrong</p>";
+			echo "<p class= 'error'>Something went wrong</p>";
 		}
 		else if($_GET["error"] == "usernametaken"){
-			echo "<p>Choose another username</p>";
+			echo "<p class= 'error'>Choose another username</p>";
 		}
 		else if($_GET["error"] == "none"){
 			echo "<p class='success'>You have signed up!</p>";

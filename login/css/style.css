@@ -1,27 +1,35 @@
-div{
-	
-font-size: 20px;
-text-align: right; 
-padding-right: 5px; 
-background-color: #660066; 
-font-family: Gill Sans, sans-serif;
+
+/* Div */
+
+div {
+  font-size: 20px;
+  text-align: right;
+  background-color: #660066;
+  font-family: Gill Sans, sans-serif;
 }
 
-.button{
-	
-	padding-right: 10px; 
-	color: white;
-	
-	
-	
+
+/* Navigation */
+
+.button {
+  color: white;
 }
 
-.button:hover{
-	
- color: white;
- box-shadow: 0px 5px #330033; 
- text-decoration: none;		
-	
+.button:hover {
+  color: white;
+  box-shadow: 0px 5px #330033;
+  text-decoration: none;
+}
 
+.home2 {
+  opacity: 0.8;
+  transition: 0.3s;
+}
 
+.home2:hover {
+  opacity: 1.0;
+}
 
+.navigation {
+  padding: 1% 2%;
+}

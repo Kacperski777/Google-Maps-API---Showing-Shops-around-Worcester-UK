@@ -15,11 +15,16 @@
 
 </div>
 
-
+<section>
 <div class="container">
-<div class="form row">
-<h2 class="col-12"> LOGIN </h2>
-<form class="col" action="includes/login.inc.php" method="post">
+<div class="form row login-form">
+<div class="col-lg-6">
+<img class="worcester2"src="img/worcester2.jpg">
+
+</div>
+<div class="col-lg-6 form2">
+<h2 class="signup-title"> LOGIN </h2>
+<form class="" action="includes/login.inc.php" method="post">
 <input class="input" type="text" name="uid" placeholder="Username/E-mail...">
 </br>
 <input class="input" type="password" name="pwd" placeholder="Password...">
@@ -29,14 +34,20 @@
 <a  href="signup.php">Create an account</a>
 </div>
 </div>
+</div>
+</section>
+
+
+
+
 <?php
 echo "<link rel='stylesheet' type='text/css' href='css/form.css'>";
 	if(isset($_GET["error"])){
 		if($_GET["error"] == "emptyinput"){
-			echo "<p>Fill in all the fields</p>";
+			echo "<p class='error'>Fill in all the fields</p>";
 		}
 		else if($_GET["error"] == "wronglogin"){
-			echo "<p>Incorrect login information</p>";
+			echo "<p class='error'>Incorrect login information</p>";
 		}
 	}
 
