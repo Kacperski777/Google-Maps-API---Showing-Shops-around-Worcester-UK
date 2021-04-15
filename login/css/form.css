@@ -54,6 +54,7 @@ body {
 
 ::placeholder {
   color: black;
+  font-size: 1rem;
 }
 
 .container {

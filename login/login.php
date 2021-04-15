@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>ShopMap | Login </title>
+	<link rel="shortcut icon" type="image/jpg" href="img/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/form.css">
 </head>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="css/form.css">
+
 
 
 <body>
@@ -19,7 +22,7 @@
 <div class="container">
 <div class="form row login-form">
 <div class="col-lg-6">
-<img class="worcester2"src="img/worcester2.jpg">
+<img class="worcester2" src="img/worcester2.jpg">
 
 </div>
 <div class="col-lg-6 form2">

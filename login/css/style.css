@@ -1,16 +1,40 @@
 
+/* Body */
+body{
+  background-color: #660066;
+}
+
+
+
+
+
+
 /* Div */
 
-div {
+.navigation {
   font-size: 20px;
-  text-align: right;
   background-color: #660066;
-  font-family: Gill Sans, sans-serif;
+  padding: 1% 2%;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 
 /* Navigation */
 
+
+.brand{
+  text-align: left;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+
+}
+
+.brand:hover{
+  color: white;
+    transition: 0.3s;
+  box-shadow: 0 5px  #330033;
+}
 .button {
   color: white;
 }
@@ -30,6 +54,54 @@ div {
   opacity: 1.0;
 }
 
-.navigation {
+
+.button-navigation{
+  float: right;
+  margin-right: 2.5rem;
+}
+
+
+/* Logged in */
+.welcome{
+  text-align: center;
+  color: white;
+}
+
+.profile{
+  font-size: 25px;
   padding: 1% 2%;
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+
+}
+
+
+.profile2{
+  font-size: 25px;
+  background-color: white;
+  padding-bottom: 28rem;
+  padding-top: 2rem;
+  margin: auto;
+  width: 50%;
+  border-radius: 20px;
+  font-weight: 700;
+  box-shadow: 5px 5px #330033;
+
+}
+
+.edit{
+    margin-right: 2.5rem;
+
+}
+
+
+h1{
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
+.user-image{
+  padding: 2.3rem;
+  border-style: solid;
+  border-color: #330033;
 }
