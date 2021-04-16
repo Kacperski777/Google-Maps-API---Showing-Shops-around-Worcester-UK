@@ -4,8 +4,6 @@ echo '
 <body onLoad="initialize()">
  <div id="map" style="width: 100%; height: 70rem;"></div>
   <div>
-    <input id="address" type="textbox" value="Worcester , UK">
-    <input type="button" value="Encode" onclick="codeAddress()" id="submit">
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr-cMsWYQHAG8DxMAl3aSD8SQ1I0AkEO8&callback=initMap&libraries=places&v=weekly"
       async

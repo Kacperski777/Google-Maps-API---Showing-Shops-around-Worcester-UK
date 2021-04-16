@@ -1,39 +1,10 @@
-var geocoder;
-var addressInner=document.getElementById('address');
-function loadJSON(callback) {
-  var xobj = new XMLHttpRequest();
-      xobj.overrideMimeType("application/json");
-  xobj.open('GET', 'data.json', true);
-  xobj.onreadystatechange = function () {
-        if (xobj.readyState == 4 && xobj.status == "200") {
-          callback(xobj.responseText);
-        }
-  };
-  xobj.send(null);
-}
 
-
-
-
-
-function init() {
-  loadJSON( (response)=> {
-   // Parsing JSON string into object
-      var actual_JSON = JSON.parse(response);
-      console.log(actual_JSON) ;
-      actual_JSON.forEach(e => {
-        console.log(e.Name);
-		console.log(e.Category);
-      });
-     });
- }
 
 
 var map;
-let result=[null,null];
+var InforObj = [];
 var i;
 function initialize(){
-  geocoder = new google.maps.Geocoder();
   var latlng = new google.maps.LatLng(52.192001,-2.220000);
   const WORCESTER_BOUNDS = {
   north: 52.24525086256363,
@@ -211,23 +182,60 @@ function initialize(){
 ]
   }
   map = new google.maps.Map(document.getElementById('map'),mapOptions);
+  // Create a <script> tag and set the USGS URL as the source.
+const script = document.createElement("script");
+// This example uses a local copy of the GeoJSON stored at
+// http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp
+script.src =
+  "test.js";
+document.getElementsByTagName("head")[0].appendChild(script);
 }
-  function codeAddress(){
-    var addressValue=document.getElementById('address').value;
-    geocoder.geocode({'address':addressValue},function(results,status){
-      if(status=="OK"){
-        map.setCenter(results[0].geometry.location);
-        console.log(results[0].geometry.location.lng())
-        console.log(results[0].geometry.location.lat())
-        i+=1;
-        var marker=new google.maps.Marker({
-          map:map,
-          position:results[0].geometry.location,
-        });
-      }
-        else{
-          alert("you done fucked up")
-        }
-    });
-  }
-init();
+
+
+icons = {
+   shopping: {
+     icon: "img/shoppingcentre.ico",
+   },
+   fuel: {
+     icon: "img/fuel.ico",
+   },
+   clothing: {
+     icon: "img/clothing.ico",
+   },
+   restaurant: {
+     icon: "img/restaurant.ico",
+   },
+ };
+
+// Loop through the results array and place a marker for each
+// set of coordinates.
+eqfeed_callback = function (results) {
+for (let i = 0; i < results.features.length; i++) {
+
+
+  const coords = results.features[i].geometry.coordinates;
+  const latLng = new google.maps.LatLng(coords[1], coords[0]);
+  const contentString = '<div id="content"><h1 style="font-size: 30px; color: purple">' + results.features[i].geometry.name +
+      '</h1><p style="font-size: 20px; color: purple">Lorem ipsum dolor sit amet, vix mutat posse suscipit id, vel ea tantas omittam detraxit.</p></div>';
+
+  const marker = new google.maps.Marker({
+    position: latLng,
+    icon: icons[results.features[i].geometry.type].icon,
+    map: map,
+  });
+
+  const infowindow = new google.maps.InfoWindow({
+      content: contentString,
+      maxWidth: 200
+
+  });
+
+  marker.addListener('click', function () {
+      infowindow.open(marker.get('map'), marker);
+      InforObj[0] = infowindow;
+  });
+}
+
+
+
+}

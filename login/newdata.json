@@ -1,7 +1,5 @@
-{
-   "html_attributions" : [],
-   "next_page_token" : "ATtYBwI3zsjkOWfgsAsnN0EGFeMuJ3dquwdE0XJW32vGoGX_MpaejCUTJxoUbHiNEjOlXky8Y40UN1hz8UmxiVH1BLt83XFjF3V0IDOgCzfYSFmDLxUz2vSM5M1bNFp2AAsJLVO_QaaClpJaWi5Hmxs64JDNDvQAKmyjGFLspYs-GjRJXzW4WRqEJXi1OOuHxJnPAbPLESMACDQ_Fc9-Wj5aK_HdBE91J6NUA94tqLd-qci10mFJfeyofLPi1cliq4qCTKIH9ESkLTuqsyRgfoSo5QIl5KjBAhrdM0imkz-rzZpGnky3PArQrjEOTPY3q2qjug9AVRza7t6P5vRv-8rPEtZ24bj7RlAo2WTFRG0nXUZSj8W7MntXF3XhheIuSKIbVSKA2AE-A8szz4jgJlQ5FaFF4TDJu7ieC76iTOTLw0yowOdfsafxFa5xAlMtRnu0tTnfSZoYxfYYag",
-   "results" : [
+eqfeed_callback({
+"features" : [
       {
          "business_status" : "OPERATIONAL",
          "formatted_address" : "Centre Management, 54 Friary Walk, Worcester WR1 3LE, United Kingdom",
@@ -245,7 +243,7 @@
             }
          },
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
-         "name" : "Fuel",
+           "name" : "Fuel",
          "opening_hours" : {
             "open_now" : true
          },
@@ -1357,7 +1355,7 @@
             }
          },
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-         "name" : "HANBAO",
+           "name" : "HANBAO",
          "opening_hours" : {
             "open_now" : true
          },
@@ -1813,4 +1811,4 @@
       }
    ],
    "status" : "OK"
-}
+});
