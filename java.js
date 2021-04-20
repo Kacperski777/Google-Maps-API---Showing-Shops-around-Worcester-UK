@@ -1,4 +1,4 @@
-const night = [
+night = [
   {
     "featureType": "administrative",
     "elementType": "geometry",
@@ -193,7 +193,7 @@ const night = [
 ]
 
 
-const day = [
+day = [
 {
 "featureType": "administrative",
 "elementType": "geometry",

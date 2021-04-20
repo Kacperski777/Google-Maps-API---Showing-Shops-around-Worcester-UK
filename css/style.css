@@ -1,0 +1,147 @@
+
+/* Body */
+body{
+  background-color: #660066;
+}
+
+
+
+
+
+/* Div */
+
+.navigation {
+  font-size: 20px;
+  background-color: #660066;
+  padding: 1% 2%;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
+/* Navigation */
+
+
+.brand{
+  text-align: left;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+
+}
+
+.brand:hover{
+  color: white;
+    transition: 0.3s;
+  box-shadow: 0 5px  #330033;
+}
+.button {
+  color: white;
+}
+
+.button:hover {
+  color: white;
+  box-shadow: 0px 5px #330033;
+  text-decoration: none;
+}
+
+.home2 {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.home2:hover {
+  opacity: 1.0;
+}
+
+
+.button-navigation{
+  float: right;
+  margin-right: 2.5rem;
+}
+
+
+/* Logged in */
+.welcome{
+  text-align: center;
+  color: white;
+}
+
+.profile{
+  font-size: 25px;
+  padding: 1% 2%;
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+
+}
+
+
+.profile2{
+  font-size: 25px;
+  background-color: white;
+  padding-bottom: 28rem;
+  padding-top: 2rem;
+  margin: auto;
+  width: 50%;
+  border-radius: 20px;
+  font-weight: 700;
+  box-shadow: 5px 5px #330033;
+
+}
+
+.edit{
+    margin-right: 2.5rem;
+
+}
+
+
+.welcome{
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+
+.user-image{
+  padding: 2.3rem;
+  border-style: solid;
+  border-color: #330033;
+}
+
+
+
+
+.white-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.purple-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  font-family: 'Monoton';
+}
+
+.white-section img{
+    box-shadow: 70px 50px #660066;
+    outline: solid 2px black;
+}
+
+.purple-section h1{
+    transform: skewY(-11deg);
+  font-size: 80px;
+}
+.purple-section h2{
+    transform: skewY(-11deg);
+  font-size: 50px;
+  margin-left: 9rem;
+  align-items: baseline;
+}
