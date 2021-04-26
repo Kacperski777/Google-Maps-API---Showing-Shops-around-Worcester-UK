@@ -350,15 +350,15 @@ day = [
 ]
 }
 ]
-
+//declare a reference to the map object name it map
 var map;
+
+//Declare a reference to the infoObj for the infowindow name it inforobj
 var InforObj = [];
 var i;
 
 function time(){
   var date = new Date();
-
-
 
   if (date.getHours() > 8 && date.getHours() < 20){
     return day;
@@ -369,7 +369,7 @@ function time(){
 }
 
 
-
+//set the initialize settings for the map
 function initialize(){
   var latlng = new google.maps.LatLng(52.192001,-2.220000);
   const WORCESTER_BOUNDS = {
@@ -378,8 +378,9 @@ function initialize(){
   west: -2.3185013774541093,
   east: -2.107416040295635,
 };
+//init the map options
   var mapOptions = {
-    zoom:13,
+    zoom:15,
     center:latlng,
     disableDefaultUI: true,
     fullscreenControl: true,
@@ -392,61 +393,73 @@ function initialize(){
     styles: time()
   }
   map = new google.maps.Map(document.getElementById('map'),mapOptions);
-  // Create a <script> tag and set the USGS URL as the source.
+  // Create a <script> tag .
 const script = document.createElement("script");
-
+// Set the json java data as the source
 script.src =
   "test.js";
 document.getElementsByTagName("head")[0].appendChild(script);
 }
 
-
+//Create a list of icons
 icons = {
    shopping: {
-     icon: "img/shoppingcentre.ico",
+     icon: "img/shoppingcentre.ico", //shopping cart
    },
    fuel: {
-     icon: "img/fuel.ico",
+     icon: "img/fuel.ico", //fuel icon
    },
    clothing: {
-     icon: "img/clothing.ico",
+     icon: "img/clothing.ico", //clothing icon
    },
    restaurant: {
-     icon: "img/restaurant.ico",
+     icon: "img/restaurant.ico", //knife and fork
    },
  };
 
-// Loop through the results array and place a marker for each
-// set of coordinates.
-eqfeed_callback = function (results) {
-for (let i = 0; i < results.features.length; i++) {
+ // Loop through the results array and place a marker for each
+  // set of coordinates.
+  eqfeed_callback = function (results) {
+  for (let i = 0; i < results.features.length; i++) {
 
 
-  const coords = results.features[i].geometry.coordinates;
-  const latLng = new google.maps.LatLng(coords[1], coords[0]);
-  const contentString =
-   '<div id="content"><h1 style="font-size: 30px; color: purple">' + results.features[i].geometry.name +
-      '</h1>' + '<h2 style="font-size: 15px; color: purple">' + results.features[i].geometry.Address + '</h2>' +
-      '<p style="font-size: 12px; color: purple">' + results.features[i].geometry.Description  +'</p> </div>';
-
-  const marker = new google.maps.Marker({
-    position: latLng,
-    icon: icons[results.features[i].geometry.type].icon,
-    map: map,
-  });
-
-  const infowindow = new google.maps.InfoWindow({
-      content: contentString,
-      maxWidth: 200
-
-  });
-
-  marker.addListener('click', function () {
-      infowindow.open(marker.get('map'), marker);
-      InforObj[0] = infowindow;
-  });
-}
+      const coords = results.features[i].geometry.coordinates;
+      const latLng = new google.maps.LatLng(coords[1], coords[0]);
+      const contentString =
+       '<div id="content"><h1 style="font-size: 30px; color: purple">' + results.features[i].geometry.name +
+          '</h1>' + '<h2 style="font-size: 15px; color: purple">' + results.features[i].geometry.Address + '</h2>' +
+          '<p style="font-size: 12px; color: purple">' + results.features[i].geometry.Description  +'</p> </div>';
 
 
+   //create a marker within the for loop
+      const marker = new google.maps.Marker({
+        position: latLng,
+        icon: icons[results.features[i].geometry.type].icon,
+        map: map,
+      });
+   //create an info window in the for loop keeping them in scope
+      const infowindow = new google.maps.InfoWindow({
+          content: contentString,
+          maxWidth: 200
 
-}
+      });
+      google.maps.event.addListener(map, "click", function(event) {
+          infowindow.close();
+      });
+
+   //when a map is clicked exectue this function opening an infowindow using the google maps library,
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+       return function() {
+         infowindow.close();
+         infowindow.setContent(contentString);
+         map.setCenter(marker.getPosition());
+         map.setZoom(50);
+         infowindow.open(map, marker);
+       }
+     })(marker, i));
+    }
+
+
+
+
+  }

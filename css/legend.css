@@ -1,0 +1,16 @@
+#legend ul {
+  position: absolute;
+  border-radius: 5px;
+  left: -3.5%;
+  top:13.5%;
+  background-color: white;
+  margin-left: 100px;
+  border:5px solid purple;
+}
+
+
+@media screen and (max-width: 375px) {
+  #legend ul {
+	  top:85%;
+  }
+}

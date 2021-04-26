@@ -50,6 +50,18 @@ function invalidEmail($email){
 
 }
 
+function invalidLength($pwd){
+	$result;
+	if(strlen($pwd)<5){
+		console.log(strlen($pwd));
+		$result=true;
+	}
+	else{
+		$result=false;
+	}
+	return $result;
+}
+
 function pwdMatch($pwd, $pwdRepeat){
 	$result;
 	if($pwd !== $pwdRepeat){

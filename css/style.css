@@ -20,6 +20,13 @@ body{
 
 /* Navigation */
 
+.index-para{
+  font-size: 20px;
+  font-weight:900;
+  text-align: center;
+  padding: 1% 2%;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
 
 .brand{
   text-align: left;
@@ -77,6 +84,7 @@ body{
 
 .profile2{
   font-size: 25px;
+  text-align: center;
   background-color: white;
   padding-bottom: 28rem;
   padding-top: 2rem;
@@ -144,4 +152,60 @@ body{
   font-size: 50px;
   margin-left: 9rem;
   align-items: baseline;
+}
+
+@media screen and (max-width: 855px) {
+  img{
+        width: 50%;
+  }
+
+
+  .profile2{
+    font-size: 15px;
+
+  }
+
+  }
+
+
+@media screen and (max-width: 600px) {
+  .purple-section h1{
+    font-size: 40px;
+  }
+  .purple-section h2{
+    font-size: 20px;
+
+  }
+
+
+  }
+
+
+  @media screen and (max-width: 445px) {
+    img{
+          display: none;
+    }
+
+
+
+
+    .profile2{
+
+        font-size: 20px;
+      width: 85%;
+
+
+    }
+
+    }
+
+
+
+
+
+@media screen and (max-width: 374px) {
+  .white-section{
+    display: none;
+  }
+
 }
