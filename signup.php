@@ -73,6 +73,10 @@ echo "<link rel='stylesheet' type='text/css' href='css/form.css'>";
 		else if($_GET["error"] == "none"){
 			echo "<p class='success'>You have signed up!</p>";
 		}
+		else if($_GET["error"] == "invalidPasswordLength"){
+			echo "<p class='error'>Password Wrong Length</p>";
+		}
+
 	}
 
 
